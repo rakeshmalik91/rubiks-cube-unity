@@ -1,2 +1,4 @@
-# rubiks-cube
-Rubik's Cube
+# Rubik's Cube #
+
+## Dependency ##
+- Unity 5
