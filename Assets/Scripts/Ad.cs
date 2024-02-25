@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
-using UnityEngine.Advertisements;
 using System.Collections;
+
+#if UNITY_ADS
+using UnityEngine.Advertisements;
+#endif
 
 public class Ad : MonoBehaviour {
 
@@ -9,15 +12,18 @@ public class Ad : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+#if UNITY_ADS
+		Debug.Log("Unity Ads is available.");
+#endif
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 	
 	}
 
 	public void ShowAd() {
+#if UNITY_ADS
 		if (Advertisement.IsReady ("rewardedVideo")) {
 			var options = new ShowOptions { resultCallback = HandleShowResult };
 			Advertisement.Show ("rewardedVideo", options);
@@ -25,8 +31,10 @@ public class Ad : MonoBehaviour {
 			error.Show ();
 			thanks.Hide ();
 		}
+#endif
 	}
 
+#if UNITY_ADS
 	private void HandleShowResult(ShowResult result)
 	{
 		switch (result)
@@ -44,4 +52,5 @@ public class Ad : MonoBehaviour {
 			break;
 		}
 	}
+#endif
 }

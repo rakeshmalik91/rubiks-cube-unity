@@ -40,3 +40,6 @@ Thumbs.db
 Build/Android/*
 Build/WebPlayer/*
 Images/
+
+*.apk
+*.aab
