@@ -50,3 +50,12 @@ The following packages were updated:
   com.unity.visualeffectgraph from version 14.0.10 to 17.0.3
 The following packages were removed:
   com.unity.textmeshpro@3.0.8
+
+=== Sat Oct 18 20:43:59 2025
+
+Packages were changed.
+Update Mode: updateDependencies
+
+The following packages were updated:
+  com.unity.postprocessing from version 3.4.0 to 3.5.0
+  com.unity.visualeffectgraph from version 17.0.3 to 17.2.0
